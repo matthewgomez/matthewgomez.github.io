@@ -1,100 +1,74 @@
-# Material Theme for Jekyll!
-## DEMO: [code.liquidthink.net](http://www.code.liquidthink.net)
-#### created with React, Redux, React-Router and transpiled with Webpack.
-![travis-ci](https://api.travis-ci.org/InsidiousMind/material-bliss-jekyll-theme.svg?branch=master)
+# Particle Jekyll Theme
 
-Made with React and served statically and dynamically
+![](./particle.jpg)
 
-### **in order to build:**
-#### for Production
+This is a simple and minimalist template for Jekyll designed for developers that want to show of their portfolio.
+
+The Theme features:
+
+- Gulp
+- SASS
+- Sweet Scroll
+- Particle.js
+- BrowserSync
+- Font Awesome and Devicon icons
+- Google Analytics
+- Info Customization
+
+## Basic Setup
+
+1. [Install Jekyll](http://jekyllrb.com)
+2. Fork the [Particle Theme](https://github.com/nrandecker/particle/fork)
+3. Clone the repo you just forked.
+4. Edit `_config.yml` to personalize your site.
+
+## Site and User Settings
+
+You have to fill some informations on `_config.yml` to customize your site.
+
 ```
-./build-prod.sh //for production build
+# Site settings
+description: A blog about lorem ipsum dolor sit amet
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://localhost:3000" # the base hostname & protocol for your site
+
+# User settings
+username: Lorem Ipsum
+user_description: Anon Developer at Lorem Ipsum Dolor
+user_title: Anon Developer
+email: anon@anon.com
+twitter_username: lorem_ipsum
+github_username:  lorem_ipsum
+gplus_username:  lorem_ipsum
 ```
 
-#### for Development:
-run both build-dev and npm run jekyll in different terminals
-```
-npm run jekyll // in one terminal
-./build-dev.sh //in another
-```
-### Features:
-- Two Themes: Light and Dark
-- Fully Responsive for most devices
-- Dynamic Fuzzy Search
-- Push-out Menu to save space and create focus for users
-- Dynamic Project Page in a masonry layout built
-- The pros of dynamic webpages matched with the awesomeness of static Jekyll
-- Optimized (99/100 on testmysite by google) with Jekyll Assets and Webpack
-- included RESTful-like API (with [jekyll-react plugin](https://github.com/InsidiousMind/Jekyll-React))
-- Static or Dynamic Pages with just a frontmatter option
-- MORE TO COME
+**Don't forget to change your url before you deploy your site!**
 
-### Screen Shots
+## Color and Particle Customization
+- Color Customization
+  - Edit the sass variables
+- Particle Customization
+  - Edit the json data in particle function in app.js
+  - Refer to [Particle.js](https://github.com/VincentGarreau/particles.js/) for help
 
-Dark Theme
-![Dark Theme](http://i.imgur.com/GfFoLXS.png)
+## Running the blog in local
 
-Light Theme
-![Light Theme](http://i.imgur.com/cdIgtax.png)
+In order to compile the assets and run Jekyll on local you need to follow those steps:
 
-Dark Theme with Push out menu active
-![Dark Theme Push Out](http://i.imgur.com/xsjkszO.png)
+- Install [NodeJS](https://nodejs.org/)
+- Run `npm install`
+- Run `gulp`
 
-Project Page
-![Project Page](http://i.imgur.com/VnLqCpi.png)
+## Questions
 
-Single Post
-![Post](http://i.imgur.com/AcZ8nNi.png)
+Having any issues file a [GitHub Issue](https://github.com/nrandecker/particle/issues/new).
 
+## License
 
-## Site Layout
+This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme anyway you want.
 
-`./react-dev/pages`
-- These are static Jekyll components being rendered with react
+## Credits
 
-`./react-dev/helpers.js`
-- these are global helpers. Right now all that is included are the static routes of you're site. Put all your static routes there (in 'staticRoutes' array), you don't need the full route just the base after your url So for example, if my posts are static and are at
- `http://www.example.com/posts/this-is-a-post.html`
- you just need "/posts/"
- this makes the loading of some parts of the site seem almost 'instant', while preserving the SEO of your site since Google can crawl the static content
-
-`./react-dev/components/menu_items.js`
-
-- This is where your menu items are rendered. If you want a new item, add an object to the Hashlist with it's corresponding path (from your root url) Javascript object. IE if it is:
-
-`const menuItems = { Home: '/', About: '/about/', Projects: '/projects/' };`
-and you want another entry, "Coding", with a path '/coding/' from the root url the object should look something like this :
-`const menuItems = { Home: '/', About: '/about/', Projects: '/projects/', Coding: '/coding'};`
-
-
-`./react-dev/actions/index.js`
-- this is where the magic happens from the JSON our Jekyll plugins rendered ( Jekyll_pages_api and Jekyll-react)
-You're going to want to add your site url to the `ROOT_URL` variable
-EX:
-if your site is at `http://www.example.com` change
-`const ROOT_URL = 'http://test_domain.com:4000';`
-to
-`const ROOT_URL = 'http://example.com';`
-
-
-### Site Config Variables:
-any site configuration that you want to let React use, put under 'react' in your `_config.yml`. This will be grabbed by the siteInfo action creator and put through it's corresponding reducer
-
-### TODO:
- - [x] create a jekyll plugin to output all [YML config] site data into JSON, in such a way which is importable to react and can be used to manage state
- - [x] [possible TODO, maybe redundant. ?] Rendered JS to HTML and outputted into a folder for Jekyll to take it. This allows us to use React components on `_layouts`
- - [x] create a Dynamic Search Function with Auto Fill
- - [x] Finish implementing Toggle Theme Switch
- - [ ] add useful important information to single-post post meta
- - [ ] make footer look better on mobile
- - [ ] Implement 'sliding' on mobile-touchA
- - [ ] make expanded search bar more responsive on mobile
- - [ ] create category pages
- - [ ] add pagination
- - [ ] Make different post 'types' (IE Fullsize page)
- - [ ] make it easier to use with Jekyll
- - [ ] Save theme in sites cookies
-
-
-### Contribution
-Want to contribute? Found an issue? Jump right in! I welcome any help I can get, and will work with you to fix any issues.
+This theme was partially designed with the inspiration from these fine folks
+- [Willian Justen](https://github.com/willianjusten/will-jekyll-template)
+- [Vincent Garreau](https://github.com/VincentGarreau/particles.js/)
