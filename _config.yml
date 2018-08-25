@@ -7,7 +7,11 @@ baseurl: matthewgomez.github.io
 
 # User settings
 username: Matt's Blog
+<<<<<<< HEAD
 user_description: Healthcare compliance, policy & operatons expert. Budding data scientist. Avid reader, SCUBA diver, & LA Galaxy supporter. Occaisional gadfly.
+=======
+user_description: Healthcare compliance, policy & operatons expert. Budding data scientist. Avid reader, SCUBA diver, & LA Galaxy supporter. Occasional gadfly. 
+>>>>>>> 04db195c55607a4df5e2f337dea5439fd83f744e
 email: matthewsgomez83@gmail.com
 twitter_username: matthewgomez
 github_username:  matthewgomez
